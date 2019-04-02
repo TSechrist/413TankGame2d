@@ -12,4 +12,5 @@ public class UnbreakableBox extends Tile{
     public boolean isSolid() {
         return true;
     }
+
 }

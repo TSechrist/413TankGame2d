@@ -21,9 +21,11 @@ public class Tank extends MoveableObject {
     private int height;
     private int playerNumber;
 
-    public Tank(int playerNumber, Game game, BufferedImage img, float x, float y){
+    public Tank(int playerNumber, Game game, BufferedImage img, int width, int height, float x, float y){
 
-        super(playerNumber, x, y, MoveableObject.width, MoveableObject.height);
+        super(playerNumber, x, y, width, height);
+        this.width = width;
+        this.height = height;
         this.game = game;
         this.img = img;
         this.playerNumber = playerNumber;

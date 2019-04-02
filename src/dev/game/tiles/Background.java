@@ -19,7 +19,7 @@ public class Background extends Tile{
     @Override
     public void render(Graphics g, int x, int y){
 
-        g.drawImage(texture, x, y, Game.width, Game.height, null);
-//        g.drawImage(texture, x, y, 1500, 1000, null);
+//        g.drawImage(texture, x, y, Game.width, Game.height, null);
+        g.drawImage(texture, x, y, 1920, 1080, null);
     }
 }

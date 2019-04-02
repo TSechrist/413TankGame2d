@@ -7,7 +7,7 @@ public class Launcher {
     public static void main(String[] args) {
 
         int width = 1500;
-        int height = 1000;
+        int height = 800;
         Game game = new Game("Test Game!", width, height);
         game.start();
     }

@@ -14,8 +14,8 @@ public class GameState extends State {
 
     public GameState(Game game){
         super(game);
-        tank1 = new Tank(1, game, Assets.smile1, 100, 100);
-        tank2 = new Tank(2, game, Assets.smile2, 200, 100);
+        tank1 = new Tank(1, game, Assets.tank, 64, 64, 100, 100);
+        tank2 = new Tank(2, game, Assets.tank, 64, 64,  200, 100);
 
     }
 
