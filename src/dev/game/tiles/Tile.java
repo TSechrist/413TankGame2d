@@ -6,16 +6,19 @@ import java.awt.image.BufferedImage;
 public class Tile {
 
     public static Tile[] tiles = new Tile[20];
-    public static Tile background = new Background(0);
-    public static Tile UnbreakableBox = new UnbreakableBox(1);
+//    public static Tile background = new Background(0);
+    public static Tile ground = new Ground(0);
+    public static Tile unbreakableBox = new UnbreakableBox(1);
+    public static Tile breakableBox = new BreakableBox(2);
+
 
     public static final int TILE_WIDTH = 64, TILE_HEIGHT = 64;
 
-    protected BufferedImage texture;
+    protected BufferedImage img;
     protected final int id;
 
-    public Tile(BufferedImage texture, int id){
-        this.texture = texture;
+    public Tile(BufferedImage img, int id){
+        this.img = img;
         this.id = id;
 
         tiles[id] = this;
@@ -27,8 +30,9 @@ public class Tile {
 
     public void render(Graphics g, int x, int y){
 
-        g.drawImage(texture, x, y, TILE_WIDTH, TILE_HEIGHT, null);
+        g.drawImage(img, x, y, TILE_WIDTH, TILE_HEIGHT, null);
     }
+
 
     public int getId(){
         return id;
