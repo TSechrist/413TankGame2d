@@ -1,6 +1,7 @@
 package dev.game.util;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 
@@ -12,7 +13,9 @@ public class Util {
 
         try
         {
-            BufferedReader br = new BufferedReader(new FileReader(path));
+            System.out.println(new File("").getAbsolutePath() + path);
+            BufferedReader br = new BufferedReader(new FileReader(new File("").getAbsolutePath() + path));
+            System.out.println("Test4");
             String input;
             while((input = br.readLine()) != null)
             {
@@ -20,6 +23,7 @@ public class Util {
             }
         }
         catch(IOException e){
+            System.out.println("Test5");
             e.printStackTrace();
         }
 
@@ -38,5 +42,5 @@ public class Util {
         }
 
     }
-    }
+
 }

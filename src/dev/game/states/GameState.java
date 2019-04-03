@@ -18,7 +18,7 @@ public class GameState extends State {
         super(game);
         tank1 = new Tank(1, game, Assets.tank, 64, 64, 100, 100);
         tank2 = new Tank(2, game, Assets.tank, 64, 64,  200, 100);
-        map = new Map("/res/mapresourses/map1.txt");
+        map = new Map("\\src\\res\\mapresourses\\map1.txt");
 
     }
 
@@ -33,10 +33,10 @@ public class GameState extends State {
     public void render(Graphics g) {
         map.render(g);
 
-        Tile.tiles[1].render(g, 1000, 500);
-        Tile.tiles[1].render(g, 500, 500);
-        Tile.tiles[2].render(g, 1250, 250);
-        Tile.tiles[2].render(g, 250, 250);
+//        Tile.tiles[1].render(g, 1000, 500);
+//        Tile.tiles[1].render(g, 500, 500);
+//        Tile.tiles[2].render(g, 1250, 250);
+//        Tile.tiles[2].render(g, 250, 250);
 
 
         tank1.render(g);
