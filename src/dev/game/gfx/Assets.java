@@ -4,11 +4,9 @@ import java.awt.image.BufferedImage;
 
 public class Assets {
 
-    public static BufferedImage smile1, smile2, box1, box2, background, tank, ground;
+    public static BufferedImage box1, box2, background, tank, ground;
 
     public static void init(){
-//        smile1 = ImageLoader.loadImage("/res/textures/Smile1.bmp");
-//        smile2 = ImageLoader.loadImage("/res/textures/Smile2.bmp");
         ground = ImageLoader.loadImage("/res/textures/Ground.jpg");
         tank = ImageLoader.loadImage("/res/textures/Tank1.jpg");
         box1 = ImageLoader.loadImage("/res/textures/box1.bmp");

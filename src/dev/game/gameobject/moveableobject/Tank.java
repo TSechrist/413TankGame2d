@@ -15,15 +15,13 @@ public class Tank extends MoveableObject {
     private Game game;
     private BufferedImage img;
     private int angle = 0;
-    private int vx;
-    private int vy;
-    private int width;
-    private int height;
+    private float vx, vy;
+    private int width, height;
     private int playerNumber;
 
     public Tank(int playerNumber, Game game, BufferedImage img, int width, int height, float x, float y){
 
-        super(playerNumber, x, y, width, height);
+        super(playerNumber, game, x, y, width, height);
         this.width = width;
         this.height = height;
         this.game = game;
@@ -65,16 +63,16 @@ public class Tank extends MoveableObject {
     }
 
     private void moveForward() {
-        vx = (int) Math.round(SPEED * Math.cos(Math.toRadians(angle)));
-        vy = (int) Math.round(SPEED * Math.sin(Math.toRadians(angle)));
+        vx = (float) Math.round(SPEED * Math.cos(Math.toRadians(angle)));
+        vy = (float) Math.round(SPEED * Math.sin(Math.toRadians(angle)));
         x += vx;
         y += vy;
 //        checkBorder();
 
     }
     private void moveBackward() {
-        vx = (int) Math.round(SPEED * Math.cos(Math.toRadians(angle)));
-        vy = (int) Math.round(SPEED * Math.sin(Math.toRadians(angle)));
+        vx = (float) Math.round(SPEED * Math.cos(Math.toRadians(angle)));
+        vy = (float) Math.round(SPEED * Math.sin(Math.toRadians(angle)));
         x -= vx;
         y -= vy;
 //        checkBorder();

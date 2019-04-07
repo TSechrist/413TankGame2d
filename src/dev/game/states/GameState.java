@@ -33,12 +33,6 @@ public class GameState extends State {
     public void render(Graphics g) {
         map.render(g);
 
-//        Tile.tiles[1].render(g, 1000, 500);
-//        Tile.tiles[1].render(g, 500, 500);
-//        Tile.tiles[2].render(g, 1250, 250);
-//        Tile.tiles[2].render(g, 250, 250);
-
-
         tank1.render(g);
         tank2.render(g);
     }

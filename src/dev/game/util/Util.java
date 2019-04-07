@@ -13,17 +13,15 @@ public class Util {
 
         try
         {
-            System.out.println(new File("").getAbsolutePath() + path);
             BufferedReader br = new BufferedReader(new FileReader(new File("").getAbsolutePath() + path));
-            System.out.println("Test4");
             String input;
             while((input = br.readLine()) != null)
             {
                 builder.append(input + "\n");
             }
+            br.close();
         }
         catch(IOException e){
-            System.out.println("Test5");
             e.printStackTrace();
         }
 
