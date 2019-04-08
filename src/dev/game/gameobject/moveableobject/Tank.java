@@ -12,7 +12,6 @@ public class Tank extends MoveableObject {
     private final int SPEED = 4;
     private final int ROTATE_SPEED = 8;
 
-    private Game game;
     private BufferedImage img;
     private int angle = 0;
     private float vx, vy;
@@ -22,9 +21,6 @@ public class Tank extends MoveableObject {
     public Tank(int playerNumber, Game game, BufferedImage img, int width, int height, float x, float y){
 
         super(playerNumber, game, x, y, width, height);
-        this.width = width;
-        this.height = height;
-        this.game = game;
         this.img = img;
         this.playerNumber = playerNumber;
     }
@@ -33,6 +29,7 @@ public class Tank extends MoveableObject {
     public void tick() {
 
         getInput();
+        game.getCamera().centerOnTank(this);
     }
 
     private void getInput(){
@@ -90,7 +87,7 @@ public class Tank extends MoveableObject {
     @Override
     public void render(Graphics g) {
 
-        AffineTransform rotation = AffineTransform.getTranslateInstance(x, y);
+        AffineTransform rotation = AffineTransform.getTranslateInstance(x - game.getCamera().getxOff(), y - game.getCamera().getyOff());
         rotation.rotate(Math.toRadians(angle), img.getWidth() / 2.0, img.getHeight() / 2.0);
         Graphics2D g2d = (Graphics2D) g;
         g2d.drawImage(img, rotation, null);
