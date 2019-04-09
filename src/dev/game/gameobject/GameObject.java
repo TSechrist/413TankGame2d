@@ -1,6 +1,7 @@
 package dev.game.gameobject;
 
 import dev.game.Game;
+import dev.game.Handler;
 
 import java.awt.*;
 
@@ -8,14 +9,14 @@ public abstract class GameObject {
 
     protected float x, y;
     protected int width, height;
-    protected Game game;
+    protected Handler handler;
 
-    public GameObject(Game game, float x, float y, int width, int height){
+    public GameObject(Handler handler, float x, float y, int width, int height){
         this.x = x;
         this.y = y;
         this.width = width;
         this.height = height;
-        this.game = game;
+        this.handler = handler;
     }
 
     public abstract void tick();

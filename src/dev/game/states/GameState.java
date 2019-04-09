@@ -1,6 +1,7 @@
 package dev.game.states;
 
 import dev.game.Game;
+import dev.game.Handler;
 import dev.game.gameobject.moveableobject.Tank;
 import dev.game.gfx.Assets;
 import dev.game.maps.Map;
@@ -14,11 +15,13 @@ public class GameState extends State {
     private Tank tank2;
     private Map map;
 
-    public GameState(Game game){
-        super(game);
+    public GameState(Handler handler){
+        super(handler);
+        map = new Map(game, "\\src\\res\\mapresourses\\map1.txt");
+        handler.setMap(map);
+
         tank1 = new Tank(1, game, Assets.tank, 64, 64, 100, 100);
         tank2 = new Tank(2, game, Assets.tank, 64, 64,  200, 100);
-        map = new Map(game, "\\src\\res\\mapresourses\\map1.txt");
 
     }
 
@@ -26,7 +29,7 @@ public class GameState extends State {
     public void tick() {
         map.tick();
         tank1.tick();
-//        tank2.tick();
+        tank2.tick();
     }
 
     @Override
@@ -34,7 +37,7 @@ public class GameState extends State {
         map.render(g);
 
         tank1.render(g);
-//        tank2.render(g);
+        tank2.render(g);
     }
 }
 

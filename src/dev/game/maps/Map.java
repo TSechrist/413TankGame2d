@@ -1,6 +1,6 @@
 package dev.game.maps;
 
-import dev.game.Game;
+import dev.game.Handler;
 import dev.game.tiles.Tile;
 import dev.game.util.Util;
 
@@ -8,14 +8,14 @@ import java.awt.*;
 
 public class Map {
 
-    private Game game;
+    private Handler handler;
     private int width, height;
     private int spawnX1, spawnX2, spawnY1, spawnY2;
     private int[][] tiles;
 
-    public Map(Game game, String path) {
+    public Map(Handler handler, String path) {
 
-        this.game = game;
+        this.handler = handler;
         loadWorld(path);
     }
 
@@ -30,7 +30,7 @@ public class Map {
         {
             for(int j = 0; j < width; j++)
             {
-                getTile(j, i).render(g, (int)(j * Tile.TILE_WIDTH - game.getCamera().getxOff()), (int)(i * Tile.TILE_HEIGHT - game.getCamera().getyOff()));
+                getTile(j, i).render(g, (int)(j * Tile.TILE_WIDTH - handler.getCamera().getxOff()), (int)(i * Tile.TILE_HEIGHT - handler.getCamera().getyOff()));
             }
         }
     }
