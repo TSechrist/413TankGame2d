@@ -9,8 +9,8 @@ public class Assets {
     public static void init(){
         ground = ImageLoader.loadImage("/res/textures/Ground.jpg");
         tank = ImageLoader.loadImage("/res/textures/Tank1.jpg");
-        box1 = ImageLoader.loadImage("/res/textures/box1.bmp");
-        box2 = ImageLoader.loadImage("/res/textures/box2.bmp");
+        box1 = ImageLoader.loadImage("/res/textures/box2.bmp");
+        box2 = ImageLoader.loadImage("/res/textures/box1.bmp");
         background = ImageLoader.loadImage("/res/textures/Background.jpg");
 
     }

@@ -36,6 +36,11 @@ public class Map {
     }
 
     public Tile getTile(int x, int y){
+        if(x < 0 || x >= width || y < 0 || y >= height)
+        {
+            return Tile.ground;
+        }
+
         Tile t = Tile.tiles[tiles[x][y]];
         if(t == null)
         {
@@ -66,6 +71,12 @@ public class Map {
                 tiles[x][y] = Util.parseInt(tokens[(x + y * width) + 6]);
             }
         }
+    }
 
+    public int getWidth(){
+        return width;
+    }
+    public int getHeight(){
+        return height;
     }
 }

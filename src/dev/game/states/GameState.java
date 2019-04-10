@@ -17,11 +17,11 @@ public class GameState extends State {
 
     public GameState(Handler handler){
         super(handler);
-        map = new Map(game, "\\src\\res\\mapresourses\\map1.txt");
+        map = new Map(handler, "\\src\\res\\mapresourses\\map1.txt");
         handler.setMap(map);
 
-        tank1 = new Tank(1, game, Assets.tank, 64, 64, 100, 100);
-        tank2 = new Tank(2, game, Assets.tank, 64, 64,  200, 100);
+        tank1 = new Tank(1, handler, Assets.tank, 64, 64, 100, 100);
+        tank2 = new Tank(2, handler, Assets.tank, 64, 64,  200, 100);
 
     }
 

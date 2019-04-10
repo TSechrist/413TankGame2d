@@ -10,7 +10,7 @@ public class Ground extends Tile {
 
     @Override
     public boolean isSolid() {
-        return true;
+        return false;
     }
 
 }

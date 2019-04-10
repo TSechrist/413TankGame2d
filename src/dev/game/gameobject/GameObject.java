@@ -10,6 +10,7 @@ public abstract class GameObject {
     protected float x, y;
     protected int width, height;
     protected Handler handler;
+    protected Rectangle bounds;
 
     public GameObject(Handler handler, float x, float y, int width, int height){
         this.x = x;
@@ -17,6 +18,8 @@ public abstract class GameObject {
         this.width = width;
         this.height = height;
         this.handler = handler;
+
+        bounds = new Rectangle(0, 0, width, height);
     }
 
     public abstract void tick();

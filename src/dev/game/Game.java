@@ -25,6 +25,7 @@ public class Game implements Runnable {
 
     private BufferStrategy bs;
     private Graphics g;
+    private Graphics g1;
 
     private State gameState;
     private State menuState;
@@ -48,8 +49,8 @@ public class Game implements Runnable {
         display.getFrame().addKeyListener(keyManager);
         Assets.init();
 
-        camera = new Camera(this, 0, 0);
         handler = new Handler(this);
+        camera = new Camera(handler, 0, 0);
 
         gameState = new GameState(handler);
         menuState = new MenuState(handler);
@@ -64,6 +65,27 @@ public class Game implements Runnable {
     }
 
     private void render(){
+
+//        BufferedImage backBuffer1 = null;
+//        BufferedImage backBuffer2 = null;
+//        bs = display.getCanvas().getBufferStrategy();
+//        if(bs == null){
+//            display.getCanvas().createBufferStrategy((3));
+//            return;
+//        }
+//        g = bs.getDrawGraphics();
+//        g1 = backBuffer1.createGraphics();
+//
+//        g.clearRect(0,0, width, height);
+//        //Draw Here
+//
+//        if(State.getState() != null)
+//            State.getState().render(g);
+//
+//        bs.show();
+//        g.dispose();
+
+
         bs = display.getCanvas().getBufferStrategy();
         if(bs == null){
             display.getCanvas().createBufferStrategy((3));
