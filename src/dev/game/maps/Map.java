@@ -1,6 +1,10 @@
 package dev.game.maps;
 
 import dev.game.Handler;
+import dev.game.gameobject.ObjectManager;
+import dev.game.gameobject.SolidWall;
+import dev.game.gameobject.moveableobject.Tank;
+import dev.game.gfx.Assets;
 import dev.game.tiles.Tile;
 import dev.game.util.Util;
 
@@ -12,16 +16,19 @@ public class Map {
     private int width, height;
     private int spawnX1, spawnX2, spawnY1, spawnY2;
     private int[][] tiles;
+    private ObjectManager objectManager;
 
     public Map(Handler handler, String path) {
 
         this.handler = handler;
+        objectManager = new ObjectManager(handler, new Tank(1, handler, Assets.tank, 64, 64, 100, 100),
+                new Tank(2, handler, Assets.tank, 64, 64, 300, 100));
         loadWorld(path);
     }
 
     public void tick(){
 
-
+        objectManager.tick();
     }
 
     public void render(Graphics g){
@@ -33,6 +40,7 @@ public class Map {
                 getTile(j, i).render(g, (int)(j * Tile.TILE_WIDTH - handler.getCamera().getxOff()), (int)(i * Tile.TILE_HEIGHT - handler.getCamera().getyOff()));
             }
         }
+        objectManager.render(g);
     }
 
     public Tile getTile(int x, int y){
@@ -69,8 +77,14 @@ public class Map {
             for(int x = 0; x < width; x++)
             {
                 tiles[x][y] = Util.parseInt(tokens[(x + y * width) + 6]);
+                if(tiles[x][y] > 0)
+                {
+                    objectManager.addObject(new SolidWall(handler, x * 64, y * 64, 64, 64));
+                }
             }
         }
+//        objectManager.printContents();
+
     }
 
     public int getWidth(){
@@ -78,5 +92,13 @@ public class Map {
     }
     public int getHeight(){
         return height;
+    }
+
+    public ObjectManager getObjectManager() {
+        return objectManager;
+    }
+
+    public void setObjectManager(ObjectManager objectManager) {
+        this.objectManager = objectManager;
     }
 }

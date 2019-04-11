@@ -26,6 +26,27 @@ public abstract class GameObject {
 
     public abstract void render(Graphics g);
 
+    public boolean checkObjectCollisions(float xOff, float yOff){
+
+        for(GameObject o : handler.getMap().getObjectManager().getGameObjects())
+        {
+            if(o.equals(this))
+            {
+                continue;
+            }
+            if(o.getCollisionBounds(0f, 0f).intersects(getCollisionBounds(xOff, yOff)))
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public Rectangle getCollisionBounds(float xOff, float yOff){
+
+        return new Rectangle((int)(x + bounds.x + xOff), (int)(y + bounds.y + yOff), bounds.width, bounds.height);
+    }
+
     public float getX() {
         return x;
     }

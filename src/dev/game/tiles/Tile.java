@@ -1,16 +1,16 @@
 package dev.game.tiles;
 
+import dev.game.gameobject.GameObject;
+
 import java.awt.*;
 import java.awt.image.BufferedImage;
 
 public class Tile {
 
     public static Tile[] tiles = new Tile[20];
-//    public static Tile background = new Background(0);
     public static Tile ground = new Ground(0);
     public static Tile unbreakableBox = new UnbreakableBox(1);
     public static Tile breakableBox = new BreakableBox(2);
-
 
     public static final int TILE_WIDTH = 64, TILE_HEIGHT = 64;
 

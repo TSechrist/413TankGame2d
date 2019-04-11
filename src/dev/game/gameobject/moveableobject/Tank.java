@@ -69,14 +69,20 @@ public class Tank extends MoveableObject {
         int cx2 = cx1 + 1;
         int cy1 = ((int)y + (int)vy) / Tile.TILE_HEIGHT;
         int cy2 = cy1 + 1;
-        if((!super.CollisionWithTile(cx1, cy1)) &&
-           (!super.CollisionWithTile(cx1, cy2)) &&
-           (!super.CollisionWithTile(cx2, cy1)) &&
-           (!super.CollisionWithTile(cx2, cy2)))
+        if(!checkObjectCollisions(vx, vy))
         {
             x += vx;
             y += vy;
         }
+
+//        if((!super.CollisionWithTile(cx1, cy1)) &&
+//           (!super.CollisionWithTile(cx1, cy2)) &&
+//           (!super.CollisionWithTile(cx2, cy1)) &&
+//           (!super.CollisionWithTile(cx2, cy2)))
+//        {
+//            x += vx;
+//            y += vy;
+//        }
 
 
 //        checkBorder();
