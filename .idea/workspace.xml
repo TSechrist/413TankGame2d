@@ -2,21 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9a8d2643-22e2-431b-a459-902c645b086a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/dev/game/gameobject/ObjectManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/dev/game/gameobject/SolidWall.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/res/mapresourses/map2.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc413-tankgame-TSechrist/dev/game/gameobject/GameObject.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/csc413-tankgame-TSechrist/dev/game/gameobject/GameObject.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc413-tankgame-TSechrist/dev/game/gameobject/moveableobject/Tank.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/csc413-tankgame-TSechrist/dev/game/gameobject/moveableobject/Tank.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc413-tankgame-TSechrist/dev/game/maps/Map.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/csc413-tankgame-TSechrist/dev/game/maps/Map.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc413-tankgame-TSechrist/dev/game/states/GameState.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/csc413-tankgame-TSechrist/dev/game/states/GameState.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/csc413-tankgame-TSechrist/dev/game/tiles/Tile.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/csc413-tankgame-TSechrist/dev/game/tiles/Tile.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dev/game/gameobject/GameObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dev/game/gameobject/GameObject.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/dev/game/gameobject/moveableobject/Tank.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dev/game/gameobject/moveableobject/Tank.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dev/game/maps/Map.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dev/game/maps/Map.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dev/game/states/GameState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dev/game/states/GameState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dev/game/tiles/Tile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dev/game/tiles/Tile.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -75,7 +61,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/dev/game/gameobject/moveableobject/MoveableObject.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-68">
+            <state relative-caret-position="136">
               <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -89,7 +75,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/dev/game/gameobject/ObjectManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="354">
+            <state relative-caret-position="495">
               <caret line="79" column="51" lean-forward="true" selection-start-line="79" selection-start-column="51" selection-end-line="79" selection-end-column="51" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -98,11 +84,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/dev/game/gameobject/moveableobject/Tank.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1473">
-              <caret line="125" selection-start-line="125" selection-end-line="127" selection-end-column="45" />
+            <state relative-caret-position="1459">
+              <caret line="99" column="35" lean-forward="true" selection-start-line="99" selection-start-column="35" selection-end-line="99" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -110,8 +96,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/dev/game/gameobject/GameObject.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="14" column="22" lean-forward="true" selection-start-line="14" selection-start-column="22" selection-end-line="21" selection-end-column="52" />
+            <state relative-caret-position="-88">
+              <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1272#1273#0" expanded="true" />
@@ -139,14 +125,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/dev/game/tiles/Tile.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="201">
-              <caret line="31" column="8" selection-start-line="31" selection-start-column="8" selection-end-line="31" selection-end-column="8" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="85">
+              <caret line="5" column="26" lean-forward="true" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -180,20 +163,21 @@
         <option value="$PROJECT_DIR$/src/dev/game/gameobject/StaticGameObject.java" />
         <option value="$PROJECT_DIR$/src/dev/game/gameobject/Statics/StaticGameObject.java" />
         <option value="$PROJECT_DIR$/src/dev/game/gameobject/GameObject.java" />
-        <option value="$PROJECT_DIR$/src/dev/game/gameobject/moveableobject/Tank.java" />
         <option value="$PROJECT_DIR$/src/dev/game/gameobject/SolidWall.java" />
         <option value="$PROJECT_DIR$/src/dev/game/gameobject/ObjectManager.java" />
         <option value="$PROJECT_DIR$/src/res/mapresourses/map2.txt" />
         <option value="$PROJECT_DIR$/src/dev/game/states/GameState.java" />
         <option value="$PROJECT_DIR$/src/dev/game/maps/Map.java" />
         <option value="$PROJECT_DIR$/src/dev/game/tiles/Tile.java" />
+        <option value="$PROJECT_DIR$/src/dev/game/gameobject/moveableobject/Tank.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="952" />
-    <option name="width" value="977" />
-    <option name="height" value="1038" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-9" />
+    <option name="y" value="-9" />
+    <option name="width" value="975" />
+    <option name="height" value="1040" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -309,7 +293,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554945335960" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555012934841" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -367,15 +351,15 @@
       <workItem from="1554435713907" duration="3090000" />
       <workItem from="1554494918068" duration="4627000" />
       <workItem from="1554689198189" duration="2949000" />
-      <workItem from="1554765337757" duration="19180000" />
+      <workItem from="1554765337757" duration="21820000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33620000" />
+    <option name="totallyTimeSpent" value="36260000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="762" y="0" width="781" height="830" extended-state="0" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Designer" order="0" />
@@ -383,7 +367,7 @@
       <window_info id="Capture Tool" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Image Layers" order="4" />
-      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.26907074" />
+      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.13020134" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="1" />
@@ -392,7 +376,7 @@
       <window_info anchor="bottom" id="Event Log" order="4" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="5" />
       <window_info anchor="bottom" id="Find" order="6" />
-      <window_info anchor="bottom" id="Run" order="7" visible="true" weight="0.33094555" />
+      <window_info active="true" anchor="bottom" id="Run" order="7" visible="true" weight="0.32719547" />
       <window_info anchor="bottom" id="Debug" order="8" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.3252149" />
@@ -537,42 +521,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/dev/game/gameobject/GameObject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="14" column="22" lean-forward="true" selection-start-line="14" selection-start-column="22" selection-end-line="21" selection-end-column="52" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1272#1273#0" expanded="true" />
-            <element signature="e#1331#1332#0" expanded="true" />
-            <element signature="e#1382#1383#0" expanded="true" />
-            <element signature="e#1439#1440#0" expanded="true" />
-            <element signature="e#1512#1513#0" expanded="true" />
-            <element signature="e#1571#1572#0" expanded="true" />
-            <element signature="e#1648#1649#0" expanded="true" />
-            <element signature="e#1707#1708#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/dev/game/gameobject/SolidWall.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="19" column="44" selection-start-line="19" selection-start-column="44" selection-end-line="19" selection-end-column="44" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dev/game/gameobject/moveableobject/MoveableObject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-68">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#662#663#0" expanded="true" />
-            <element signature="e#699#700#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -584,27 +538,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/dev/game/gameobject/moveableobject/Tank.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1473">
-          <caret line="125" selection-start-line="125" selection-end-line="127" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/res/mapresourses/map2.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="6" column="19" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dev/game/gameobject/ObjectManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="354">
-          <caret line="79" column="51" lean-forward="true" selection-start-line="79" selection-start-column="51" selection-end-line="79" selection-end-column="51" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -633,11 +570,55 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/dev/game/tiles/Tile.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="201">
-          <caret line="31" column="8" selection-start-line="31" selection-start-column="8" selection-end-line="31" selection-end-column="8" />
+        <state relative-caret-position="85">
+          <caret line="5" column="26" lean-forward="true" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dev/game/gameobject/ObjectManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="79" column="51" lean-forward="true" selection-start-line="79" selection-start-column="51" selection-end-line="79" selection-end-column="51" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dev/game/gameobject/moveableobject/MoveableObject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#662#663#0" expanded="true" />
+            <element signature="e#699#700#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dev/game/gameobject/GameObject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-88">
+          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1272#1273#0" expanded="true" />
+            <element signature="e#1331#1332#0" expanded="true" />
+            <element signature="e#1382#1383#0" expanded="true" />
+            <element signature="e#1439#1440#0" expanded="true" />
+            <element signature="e#1512#1513#0" expanded="true" />
+            <element signature="e#1571#1572#0" expanded="true" />
+            <element signature="e#1648#1649#0" expanded="true" />
+            <element signature="e#1707#1708#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dev/game/gameobject/moveableobject/Tank.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1459">
+          <caret line="99" column="35" lean-forward="true" selection-start-line="99" selection-start-column="35" selection-end-line="99" selection-end-column="35" />
         </state>
       </provider>
     </entry>

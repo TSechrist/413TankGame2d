@@ -11,7 +11,7 @@ import java.awt.image.BufferedImage;
 
 public class Tank extends MoveableObject {
 
-    private final int SPEED = 8;
+    private final int SPEED = 10;
     private final int ROTATE_SPEED = 8;
 
     private BufferedImage img;
@@ -65,10 +65,10 @@ public class Tank extends MoveableObject {
     private void moveForward() {
         vx = (float) Math.round(SPEED * Math.cos(Math.toRadians(angle)));
         vy = (float) Math.round(SPEED * Math.sin(Math.toRadians(angle)));
-        int cx1 = ((int)x + (int)vx) / Tile.TILE_WIDTH;
-        int cx2 = cx1 + 1;
-        int cy1 = ((int)y + (int)vy) / Tile.TILE_HEIGHT;
-        int cy2 = cy1 + 1;
+//        int cx1 = ((int)x + (int)vx) / Tile.TILE_WIDTH;
+//        int cx2 = cx1 + 1;
+//        int cy1 = ((int)y + (int)vy) / Tile.TILE_HEIGHT;
+//        int cy2 = cy1 + 1;
         if(!checkObjectCollisions(vx, vy))
         {
             x += vx;
@@ -91,18 +91,24 @@ public class Tank extends MoveableObject {
     private void moveBackward() {
         vx = (float) Math.round(SPEED * Math.cos(Math.toRadians(angle)));
         vy = (float) Math.round(SPEED * Math.sin(Math.toRadians(angle)));
-        int cx1 = ((int)x - (int)vx) / Tile.TILE_WIDTH;
-        int cx2 = cx1 + 1;
-        int cy1 = ((int)y - (int)vy) / Tile.TILE_HEIGHT;
-        int cy2 = cy1 + 1;
-        if((!super.CollisionWithTile(cx1, cy1)) &&
-                (!super.CollisionWithTile(cx1, cy2)) &&
-                (!super.CollisionWithTile(cx2, cy1)) &&
-                (!super.CollisionWithTile(cx2, cy2)))
+        if(!checkObjectCollisions(vx * -1, vy * -1))
         {
             x -= vx;
             y -= vy;
         }
+
+//        int cx1 = ((int)x - (int)vx) / Tile.TILE_WIDTH;
+//        int cx2 = cx1 + 1;
+//        int cy1 = ((int)y - (int)vy) / Tile.TILE_HEIGHT;
+//        int cy2 = cy1 + 1;
+//        if((!super.CollisionWithTile(cx1, cy1)) &&
+//                (!super.CollisionWithTile(cx1, cy2)) &&
+//                (!super.CollisionWithTile(cx2, cy1)) &&
+//                (!super.CollisionWithTile(cx2, cy2)))
+//        {
+//            x -= vx;
+//            y -= vy;
+//        }
 //        checkBorder();
 
     }
