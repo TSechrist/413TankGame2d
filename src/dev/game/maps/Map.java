@@ -21,8 +21,8 @@ public class Map {
     public Map(Handler handler, String path) {
 
         this.handler = handler;
-        objectManager = new ObjectManager(handler, new Tank(1, handler, Assets.tank, 64, 64, 100, 100),
-                new Tank(2, handler, Assets.tank, 64, 64, 300, 100));
+        objectManager = new ObjectManager(handler, new Tank(1, handler, Assets.tank, 64, 64, 128, 128),
+                new Tank(2, handler, Assets.tank, 64, 64, 512, 128));
         loadWorld(path);
     }
 

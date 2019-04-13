@@ -15,10 +15,9 @@ public class Tank extends MoveableObject {
     private final int ROTATE_SPEED = 8;
 
     private BufferedImage img;
-    private int angle = 0;
-    private float vx, vy;
     private int width, height;
     private int playerNumber;
+    private int shootDelay = 0;
 
     public Tank(int playerNumber, Handler handler, BufferedImage img, int width, int height, float x, float y){
 
@@ -31,6 +30,8 @@ public class Tank extends MoveableObject {
     @Override
     public void tick() {
 
+        System.out.println(shootDelay);
+        shootDelay--;
         getInput();
         handler.getCamera().centerOnTank(this);
     }
@@ -40,85 +41,44 @@ public class Tank extends MoveableObject {
         if(playerNumber == 1)
         {
             if(handler.getKeyManager().up1)
-                this.moveForward();
+                moveForward();
             if(handler.getKeyManager().down1)
-                this.moveBackward();
+                moveBackward();
             if(handler.getKeyManager().left1)
-                this.rotateLeft();
+                rotateLeft();
             if(handler.getKeyManager().right1)
-                this.rotateRight();
+                rotateRight();
+            if(handler.getKeyManager().shoot1)
+            {
+                System.out.println("shoot");
+//                if(shootDelay < 0)
+                {
+                    tankShoot();
+                    shootDelay = 30;
+                }
+            }
+
         }
         if(playerNumber == 2)
         {
             if(handler.getKeyManager().up2)
-                this.moveForward();
+                moveForward();
             if(handler.getKeyManager().down2)
-                this.moveBackward();
+                moveBackward();
             if(handler.getKeyManager().left2)
-                this.rotateLeft();
+                rotateLeft();
             if(handler.getKeyManager().right2)
-                this.rotateRight();
+                rotateRight();
+            if(handler.getKeyManager().shoot2)
+            {
+                System.out.println("shoot");
+//                if(shootDelay < 0)
+                {
+                    tankShoot();
+                    shootDelay = 30;
+                }
+            }
         }
-
-    }
-
-    private void moveForward() {
-        vx = (float) Math.round(SPEED * Math.cos(Math.toRadians(angle)));
-        vy = (float) Math.round(SPEED * Math.sin(Math.toRadians(angle)));
-//        int cx1 = ((int)x + (int)vx) / Tile.TILE_WIDTH;
-//        int cx2 = cx1 + 1;
-//        int cy1 = ((int)y + (int)vy) / Tile.TILE_HEIGHT;
-//        int cy2 = cy1 + 1;
-        if(!checkObjectCollisions(vx, vy))
-        {
-            x += vx;
-            y += vy;
-        }
-
-//        if((!super.CollisionWithTile(cx1, cy1)) &&
-//           (!super.CollisionWithTile(cx1, cy2)) &&
-//           (!super.CollisionWithTile(cx2, cy1)) &&
-//           (!super.CollisionWithTile(cx2, cy2)))
-//        {
-//            x += vx;
-//            y += vy;
-//        }
-
-
-//        checkBorder();
-
-    }
-    private void moveBackward() {
-        vx = (float) Math.round(SPEED * Math.cos(Math.toRadians(angle)));
-        vy = (float) Math.round(SPEED * Math.sin(Math.toRadians(angle)));
-        if(!checkObjectCollisions(vx * -1, vy * -1))
-        {
-            x -= vx;
-            y -= vy;
-        }
-
-//        int cx1 = ((int)x - (int)vx) / Tile.TILE_WIDTH;
-//        int cx2 = cx1 + 1;
-//        int cy1 = ((int)y - (int)vy) / Tile.TILE_HEIGHT;
-//        int cy2 = cy1 + 1;
-//        if((!super.CollisionWithTile(cx1, cy1)) &&
-//                (!super.CollisionWithTile(cx1, cy2)) &&
-//                (!super.CollisionWithTile(cx2, cy1)) &&
-//                (!super.CollisionWithTile(cx2, cy2)))
-//        {
-//            x -= vx;
-//            y -= vy;
-//        }
-//        checkBorder();
-
-    }
-    private void rotateLeft() {
-        this.angle = ((this.angle % 360) - this.ROTATE_SPEED);
-
-    }
-    private void rotateRight() {
-        this.angle = ((this.angle % 360) + this.ROTATE_SPEED);
-
     }
 
     @Override
@@ -132,6 +92,10 @@ public class Tank extends MoveableObject {
         g.drawRect((int)(x + bounds.x - handler.getCamera().getxOff()),
                 (int)(y + bounds.y - handler.getCamera().getyOff()),
                 bounds.width, bounds.height);
-//        g.drawImage(Assets.smile1, (int)x, (int)y, null);
+    }
+
+    public int getPlayerNumber(){
+
+        return playerNumber;
     }
 }

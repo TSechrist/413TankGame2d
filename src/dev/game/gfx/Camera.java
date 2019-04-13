@@ -23,8 +23,8 @@ public class Camera {
         if(xOff < 0){
             xOff = 0;
         }
-        else if(xOff > handler.getMap().getWidth() * Tile.TILE_WIDTH - handler.getWidth() + 64){
-            xOff = handler.getMap().getWidth() * Tile.TILE_WIDTH - handler.getWidth() + 64;
+        else if(xOff > handler.getMap().getWidth() * Tile.TILE_WIDTH - handler.getWidth()){
+            xOff = handler.getMap().getWidth() * Tile.TILE_WIDTH - handler.getWidth();
         }
 
         if(yOff < 0){

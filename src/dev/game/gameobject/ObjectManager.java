@@ -74,6 +74,11 @@ public class ObjectManager {
         gameObjects.add(o);
     }
 
+    public void removeObject(GameObject o){
+
+        gameObjects.remove(o);
+    }
+
     public void printContents(){
         for(int i = 0; i < gameObjects.size(); i++)
         {
