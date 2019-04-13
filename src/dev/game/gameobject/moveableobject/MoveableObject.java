@@ -64,7 +64,7 @@ public abstract class MoveableObject extends GameObject {
         vx = (float) Math.round(SPEED * Math.cos(Math.toRadians(angle))) * 10 - 32;
         vy = (float) Math.round(SPEED * Math.sin(Math.toRadians(angle))) * 10 - 32;
 
-        Bullet b = new Bullet(handler, Assets.tank, x + vx, y + vy, this.angle, 1, 1);
+        Bullet b = new Bullet(handler, Assets.tank, x + vx, y + vy, this.angle, height, width);
         handler.getMap().getObjectManager().addObject(b);
     }
 }

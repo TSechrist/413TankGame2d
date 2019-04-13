@@ -72,7 +72,7 @@ public class Tank extends MoveableObject {
             if(handler.getKeyManager().shoot2)
             {
                 System.out.println("shoot");
-//                if(shootDelay < 0)
+                if(shootDelay < 0)
                 {
                     tankShoot();
                     shootDelay = 30;

@@ -29,10 +29,10 @@ public class Bullet extends MoveableObject {
             this.y += vy;
         }
 
-//        if(this.checkObjectCollisions(x, y)){
-//
-//            handler.getMap().getObjectManager().removeObject(this);
-//        }
+        if(this.checkObjectCollisions(vx, vy)){
+
+            handler.getMap().getObjectManager().removeObject(this);
+        }
     }
 
     @Override
