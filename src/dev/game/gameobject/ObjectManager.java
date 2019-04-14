@@ -27,6 +27,10 @@ public class ObjectManager {
         for(int i = 0; i < gameObjects.size(); i++){
             GameObject o = gameObjects.get(i);
             o.tick();
+            if(!o.isActive())
+            {
+                gameObjects.remove(o);
+            }
         }
     }
 

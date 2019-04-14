@@ -1,6 +1,7 @@
 package dev.game.maps;
 
 import dev.game.Handler;
+import dev.game.gameobject.BreakableWall;
 import dev.game.gameobject.ObjectManager;
 import dev.game.gameobject.SolidWall;
 import dev.game.gameobject.moveableobject.Tank;
@@ -77,13 +78,18 @@ public class Map {
             for(int x = 0; x < width; x++)
             {
                 tiles[x][y] = Util.parseInt(tokens[(x + y * width) + 6]);
-                if(tiles[x][y] > 0)
+                if(tiles[x][y] == 1)
                 {
                     objectManager.addObject(new SolidWall(handler, x * 64, y * 64, 64, 64));
                 }
+                else if(tiles[x][y] == 2)
+                {
+                    objectManager.addObject(new BreakableWall(handler, x * 64, y * 64, 64, 64));
+
+                }
             }
         }
-//        objectManager.printContents();
+        objectManager.printContents();
 
     }
 

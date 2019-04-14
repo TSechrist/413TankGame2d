@@ -11,9 +11,6 @@ import java.awt.image.BufferedImage;
 
 public class Tank extends MoveableObject {
 
-    private final int SPEED = 10;
-    private final int ROTATE_SPEED = 8;
-
     private BufferedImage img;
     private int width, height;
     private int playerNumber;
@@ -33,6 +30,12 @@ public class Tank extends MoveableObject {
         shootDelay--;
         getInput();
         handler.getCamera().centerOnTank(this);
+    }
+
+    @Override
+    public void die(){
+
+
     }
 
     private void getInput(){

@@ -10,7 +10,6 @@ public abstract class MoveableObject extends GameObject {
     protected final int SPEED = 8;
     private final int ROTATE_SPEED = 8;
 
-    protected int health;
     protected int angle = 0;
     protected float vx, vy;
 
@@ -64,7 +63,7 @@ public abstract class MoveableObject extends GameObject {
         vx = (float) Math.round(SPEED * Math.cos(Math.toRadians(angle))) * 10 - 32;
         vy = (float) Math.round(SPEED * Math.sin(Math.toRadians(angle))) * 10 - 32;
 
-        Bullet b = new Bullet(handler, Assets.tank, x + vx, y + vy, this.angle, height, width);
+        Bullet b = new Bullet(handler, Assets.bullet, x + vx, y + vy, this.angle, 32, 32);
         handler.getMap().getObjectManager().addObject(b);
     }
 }

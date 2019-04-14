@@ -11,6 +11,8 @@ public abstract class GameObject {
     protected int width, height;
     protected Handler handler;
     protected Rectangle bounds;
+    protected int health;
+    protected boolean active = true;
 
     public GameObject(Handler handler, float x, float y, int width, int height){
         this.x = x;
@@ -18,6 +20,7 @@ public abstract class GameObject {
         this.width = width;
         this.height = height;
         this.handler = handler;
+        health = 100;
 
         bounds = new Rectangle(0, 0, width, height);
     }
@@ -25,6 +28,18 @@ public abstract class GameObject {
     public abstract void tick();
 
     public abstract void render(Graphics g);
+
+    public abstract void die();
+
+    public void damage(int dmg){
+
+        health -= dmg;
+        if(health <= 0)
+        {
+            active = false;
+            die();
+        }
+    }
 
     public boolean checkObjectCollisions(float xOff, float yOff){
 
@@ -80,4 +95,19 @@ public abstract class GameObject {
     }
 
 
+    public int getHealth() {
+        return health;
+    }
+
+    public void setHealth(int health) {
+        this.health = health;
+    }
+
+    public boolean isActive() {
+        return active;
+    }
+
+    public void setActive(boolean active) {
+        this.active = active;
+    }
 }

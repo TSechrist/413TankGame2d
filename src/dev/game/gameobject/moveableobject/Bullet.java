@@ -31,8 +31,15 @@ public class Bullet extends MoveableObject {
 
         if(this.checkObjectCollisions(vx, vy)){
 
-            handler.getMap().getObjectManager().removeObject(this);
+            this.active = false;
+//            handler.getMap().getObjectManager().removeObject(this);
         }
+    }
+
+    @Override
+    public void die(){
+
+
     }
 
     @Override
