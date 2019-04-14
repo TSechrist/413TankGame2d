@@ -30,7 +30,6 @@ public class Tank extends MoveableObject {
     @Override
     public void tick() {
 
-        System.out.println(shootDelay);
         shootDelay--;
         getInput();
         handler.getCamera().centerOnTank(this);
@@ -50,8 +49,7 @@ public class Tank extends MoveableObject {
                 rotateRight();
             if(handler.getKeyManager().shoot1)
             {
-                System.out.println("shoot");
-//                if(shootDelay < 0)
+                if(shootDelay < 0)
                 {
                     tankShoot();
                     shootDelay = 30;
@@ -71,7 +69,6 @@ public class Tank extends MoveableObject {
                 rotateRight();
             if(handler.getKeyManager().shoot2)
             {
-                System.out.println("shoot");
                 if(shootDelay < 0)
                 {
                     tankShoot();
