@@ -1,6 +1,10 @@
 package dev.game.gameobject.moveableobject;
 
 import dev.game.Handler;
+import dev.game.gameobject.BreakableWall;
+import dev.game.gameobject.GameObject;
+import dev.game.gameobject.PowerUp;
+import dev.game.gameobject.SolidWall;
 
 import java.awt.*;
 import java.awt.geom.AffineTransform;
@@ -10,6 +14,7 @@ public class Bullet extends MoveableObject {
 
     private BufferedImage img;
     private int angle;
+    private int dmgAmt = 25;
 
     public Bullet(Handler handler, BufferedImage img, float x, float y, int angle, int height, int width) {
         super(handler, x + 32, y + 32, height, width);
@@ -31,8 +36,20 @@ public class Bullet extends MoveableObject {
 
         if(this.checkObjectCollisions(vx, vy)){
 
-            this.active = false;
-//            handler.getMap().getObjectManager().removeObject(this);
+            if(getObjectCollide(vx, vy) instanceof BreakableWall || getObjectCollide(vx, vy) instanceof Tank)
+            {
+                getObjectCollide(vx, vy).damage(dmgAmt);
+                this.active = false;
+            }
+            else if (getObjectCollide(vx, vy) instanceof SolidWall)
+            {
+                this.active = false;
+            }
+            else if(getObjectCollide(vx, vy) instanceof PowerUp)
+            {
+                this.x += vx;
+                this.y += vy;
+            }
         }
     }
 

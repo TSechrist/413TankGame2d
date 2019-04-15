@@ -4,7 +4,7 @@ import java.awt.image.BufferedImage;
 
 public class Assets {
 
-    public static BufferedImage box1, box2, background, tank, ground, bullet, menuScreen;
+    public static BufferedImage box1, box2, background, tank, ground, bullet, menuScreen, powerup;
 
     public static void init(){
         ground = ImageLoader.loadImage("/res/textures/Ground.jpg");
@@ -14,6 +14,7 @@ public class Assets {
         background = ImageLoader.loadImage("/res/textures/Background.jpg");
         bullet = ImageLoader.loadImage("/res/textures/bullet2.jpg");
         menuScreen = ImageLoader.loadImage("/res/textures/TitleScreen.jpg");
+        powerup = ImageLoader.loadImage("/res/textures/PowerUp.jpg");
 
     }
 }

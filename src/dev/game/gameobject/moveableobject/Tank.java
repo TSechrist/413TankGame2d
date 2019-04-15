@@ -2,6 +2,7 @@ package dev.game.gameobject.moveableobject;
 
 import dev.game.Game;
 import dev.game.Handler;
+import dev.game.gameobject.PowerUp;
 import dev.game.gfx.Assets;
 import dev.game.tiles.Tile;
 
@@ -27,6 +28,10 @@ public class Tank extends MoveableObject {
     @Override
     public void tick() {
 
+        if(health <= 0)
+        {
+            die();
+        }
         shootDelay--;
         getInput();
         handler.getCamera().centerOnTank(this);
@@ -35,7 +40,13 @@ public class Tank extends MoveableObject {
     @Override
     public void die(){
 
+        handler.getMap().getObjectManager().removeObject(this);
 
+    }
+
+    public void damage(int dmgAmt){
+
+        health = health - dmgAmt;
     }
 
     private void getInput(){
@@ -55,7 +66,7 @@ public class Tank extends MoveableObject {
                 if(shootDelay < 0)
                 {
                     tankShoot();
-                    shootDelay = 30;
+                    shootDelay = 20;
                 }
             }
 
@@ -75,7 +86,7 @@ public class Tank extends MoveableObject {
                 if(shootDelay < 0)
                 {
                     tankShoot();
-                    shootDelay = 30;
+                    shootDelay = 20;
                 }
             }
         }
@@ -98,4 +109,6 @@ public class Tank extends MoveableObject {
 
         return playerNumber;
     }
+
+
 }

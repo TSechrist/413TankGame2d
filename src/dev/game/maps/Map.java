@@ -89,8 +89,18 @@ public class Map {
                 }
             }
         }
-        objectManager.printContents();
+//        objectManager.printContents();
 
+    }
+
+    public int[][] getTileArray(){
+
+        return tiles;
+    }
+
+    public void setTileArray(int x, int y, int num){
+
+        this.tiles[x][y] = num;
     }
 
     public int getWidth(){
@@ -103,6 +113,7 @@ public class Map {
     public ObjectManager getObjectManager() {
         return objectManager;
     }
+
 
     public void setObjectManager(ObjectManager objectManager) {
         this.objectManager = objectManager;

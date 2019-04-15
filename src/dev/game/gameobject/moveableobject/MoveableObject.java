@@ -3,30 +3,36 @@ package dev.game.gameobject.moveableobject;
 import dev.game.Game;
 import dev.game.Handler;
 import dev.game.gameobject.GameObject;
+import dev.game.gameobject.PowerUp;
 import dev.game.gfx.Assets;
 
 public abstract class MoveableObject extends GameObject {
 
-    protected final int SPEED = 8;
-    private final int ROTATE_SPEED = 8;
+    protected final int SPEED = 6;
+    private final int ROTATE_SPEED = 4;
 
     protected int angle = 0;
     protected float vx, vy;
 
     public MoveableObject(int playerNumber, Handler handler, float x, float y, int width, int height){
         super(handler, x, y, width, height);
-        health = 100;
 
     }
     public MoveableObject(Handler handler, float x, float y, int height, int width){
         super(handler, x, y, height, width);
-        health = 100;
 
     }
 
     protected void moveForward() {
         vx = (float) Math.round(SPEED * Math.cos(Math.toRadians(angle)));
         vy = (float) Math.round(SPEED * Math.sin(Math.toRadians(angle)));
+
+        if(this instanceof Tank && getObjectCollide(vx, vy) instanceof PowerUp)
+        {
+            this.setHealth(100);
+            handler.getMap().getObjectManager().removeObject(getObjectCollide(vx, vy));
+        }
+
         if(!checkObjectCollisions(vx, vy))
         {
             x += vx;
@@ -60,8 +66,8 @@ public abstract class MoveableObject extends GameObject {
     }
 
     protected void tankShoot(){
-        vx = (float) Math.round(SPEED * Math.cos(Math.toRadians(angle))) * 10 - 32;
-        vy = (float) Math.round(SPEED * Math.sin(Math.toRadians(angle))) * 10 - 32;
+        vx = (float) Math.round(SPEED * Math.cos(Math.toRadians(angle))) * 11 - 16;
+        vy = (float) Math.round(SPEED * Math.sin(Math.toRadians(angle))) * 11 - 16;
 
         Bullet b = new Bullet(handler, Assets.bullet, x + vx, y + vy, this.angle, 32, 32);
         handler.getMap().getObjectManager().addObject(b);

@@ -15,7 +15,7 @@ public class Tile {
     public static final int TILE_WIDTH = 64, TILE_HEIGHT = 64;
 
     protected BufferedImage img;
-    protected final int id;
+    protected int id;
 
     public Tile(BufferedImage img, int id){
         this.img = img;
@@ -36,6 +36,11 @@ public class Tile {
 
     public int getId(){
         return id;
+    }
+
+    public void setId(int num){
+
+        this.id = num;
     }
 
     public boolean isSolid(){
