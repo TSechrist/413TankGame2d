@@ -4,6 +4,7 @@ import dev.game.Game;
 import dev.game.Handler;
 import dev.game.gameobject.PowerUp;
 import dev.game.gfx.Assets;
+import dev.game.states.State;
 import dev.game.tiles.Tile;
 
 import java.awt.*;
@@ -16,10 +17,14 @@ public class Tank extends MoveableObject {
     private int width, height;
     private int playerNumber;
     private int shootDelay = 0;
+    private int lives = 2;
+    private float spawnX, spawnY;
 
     public Tank(int playerNumber, Handler handler, BufferedImage img, int width, int height, float x, float y){
 
         super(playerNumber, handler, x, y, width, height);
+        spawnX = x;
+        spawnY = y;
         this.img = img;
         this.playerNumber = playerNumber;
 
@@ -40,7 +45,19 @@ public class Tank extends MoveableObject {
     @Override
     public void die(){
 
-        handler.getMap().getObjectManager().removeObject(this);
+        if(lives <= 0){
+//            handler.getMap().getObjectManager().removeObject(this);
+//            System.out.println("Game Over");
+            handler.getKeyManager().anyKeyPressed = false;
+            handler.getGame().setState(handler.getGame().endState);
+        }
+        else{
+
+            this.x = spawnX;
+            this.y = spawnY;
+            health = 100;
+            lives--;
+        }
 
     }
 

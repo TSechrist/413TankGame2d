@@ -5,6 +5,7 @@ import dev.game.gfx.Assets;
 import dev.game.gfx.Camera;
 import dev.game.gfx.ImageLoader;
 import dev.game.input.KeyManager;
+import dev.game.states.EndState;
 import dev.game.states.GameState;
 import dev.game.states.MenuState;
 import dev.game.states.State;
@@ -29,6 +30,7 @@ public class Game implements Runnable {
 
     public State gameState;
     public State menuState;
+    public State endState;
 
     private KeyManager keyManager;
 
@@ -54,6 +56,7 @@ public class Game implements Runnable {
 
         gameState = new GameState(handler);
         menuState = new MenuState(handler);
+        endState = new EndState(handler);
         State.setState(menuState);
     }
 
@@ -129,12 +132,6 @@ public class Game implements Runnable {
                 delta--;
             }
 
-//            if(timer >= 1000000000){
-//                System.out.println("Ticks and Frames: " + ticks);
-//                ticks = 0;
-//                timer = 0;
-//            }
-
         }
         stop();
     }
@@ -176,6 +173,15 @@ public class Game implements Runnable {
 
     public int getHeight(){
         return height;
+    }
+
+    public Display getDisplay(){
+        return display;
+    }
+
+    public void setState(State state){
+
+        State.setState(state);
     }
 
 }
