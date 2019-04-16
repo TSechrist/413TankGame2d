@@ -66,10 +66,10 @@ public class Bullet extends MoveableObject {
         rotation.rotate(Math.toRadians(this.angle), img.getWidth() / 2.0, img.getHeight() / 2.0);
         Graphics2D g2d = (Graphics2D) g;
         g2d.drawImage(img, rotation, null);
-        g.setColor(Color.green);
-        g.drawRect((int)(this.x + bounds.x - handler.getCamera().getxOff()),
-                (int)(y + bounds.y - handler.getCamera().getyOff()),
-                bounds.width, bounds.height);
+//        g.setColor(Color.green);
+//        g.drawRect((int)(this.x + bounds.x - handler.getCamera().getxOff()),
+//                (int)(y + bounds.y - handler.getCamera().getyOff()),
+//                bounds.width, bounds.height);
     }
 
 

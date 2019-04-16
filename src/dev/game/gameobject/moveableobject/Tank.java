@@ -117,9 +117,14 @@ public class Tank extends MoveableObject {
         Graphics2D g2d = (Graphics2D) g;
         g2d.drawImage(img, rotation, null);
         g.setColor(Color.red);
-        g.drawRect((int)(x + bounds.x - handler.getCamera().getxOff()),
-                (int)(y + bounds.y - handler.getCamera().getyOff()),
-                bounds.width, bounds.height);
+        for(int i = 0; i < lives; i++){
+            g.fillRect((int)(x - handler.getCamera().getxOff() + (i * 12)), (int)(y - handler.getCamera().getyOff() + 66), 10, 10);
+        }
+//        g.drawRect((int)(x + bounds.x - handler.getCamera().getxOff()),
+//                (int)(y + bounds.y - handler.getCamera().getyOff()),
+//                bounds.width, bounds.height);
+        g.setColor(Color.green);
+        g.fillRect((int)(x - handler.getCamera().getxOff()), (int)(y - handler.getCamera().getyOff() - 12), (int)(health * .6), 10);
     }
 
     public int getPlayerNumber(){
